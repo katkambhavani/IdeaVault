@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "IdeaVault"
+description = "A student project-idea platform to create and organize ideas, discover collaborators, save projects, and manage a student profile."
+version = "1.0.0"
+id = "artifacts/ideavault"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21221
+
+[services.development]
+run = "pnpm --filter @workspace/ideavault run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ideavault", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ideavault/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21221"
+BASE_PATH = "/"

@@ -1,0 +1,492 @@
+Build a complete, modern and responsive web application called **IdeaVault**.
+
+### PROJECT IDEA
+
+IdeaVault is a student project-idea management and collaboration platform.
+
+The problem:
+College students often have good project ideas but forget them, don't know how to organize them, or cannot find other students who are interested in the same idea.
+
+The solution:
+IdeaVault allows students to create, save, explore and organize project ideas and find potential teammates.
+
+This should be a real functional web application, not just a landing page.
+
+---
+
+## TECHNOLOGY
+
+Use:
+
+* React
+* JavaScript
+* CSS
+* React Router
+
+Keep the code clean and beginner-friendly.
+
+For the first version, do NOT use an external database or complicated backend.
+
+Use localStorage for storing users, project ideas, saved ideas and basic application data so the application works immediately.
+
+Do not add unnecessary libraries unless they are genuinely needed.
+
+---
+
+# PAGES
+
+Create these pages:
+
+### 1. LANDING PAGE
+
+Create an attractive homepage with:
+
+Hero heading:
+
+**"Turn Your Ideas Into Projects."**
+
+Subtitle:
+
+**"Save ideas. Find teammates. Build something meaningful."**
+
+Buttons:
+
+* Explore Ideas
+* Create an Idea
+
+Include sections explaining:
+
+* Capture Ideas
+* Find Teammates
+* Build Projects
+
+Add a simple "How It Works" section:
+
+1. Create an idea
+2. Find interested students
+3. Build together
+
+Add a clean footer.
+
+---
+
+# 2. REGISTER PAGE
+
+Create a registration form with:
+
+* Full Name
+* Email
+* Password
+* College
+* Course
+* Year
+
+Add validation.
+
+Store registered users in localStorage.
+
+Do not use real authentication services yet.
+
+---
+
+# 3. LOGIN PAGE
+
+Create:
+
+* Email
+* Password
+* Login button
+* Link to Register
+
+Validate the credentials against the locally stored users.
+
+After successful login, redirect to Dashboard.
+
+Add logout functionality.
+
+---
+
+# 4. DASHBOARD
+
+Create a student dashboard.
+
+Show:
+
+* Welcome message with user's name
+* Total Ideas
+* Saved Ideas
+* My Projects
+
+Add quick-action buttons:
+
+* * Create Idea
+* Explore Ideas
+* Saved Ideas
+
+Show the student's recently created ideas.
+
+Create a clean dashboard layout.
+
+---
+
+# 5. CREATE IDEA
+
+Create a form for adding a project idea.
+
+Fields:
+
+* Project Title
+* Short Description
+* Detailed Description
+* Category
+* Technologies
+* Difficulty Level
+* Required Team Members
+* Current Team Members
+* Project Status
+
+Categories:
+
+* Web Development
+* Mobile App
+* Software
+* Education
+* Health
+* Environment
+* Finance
+* Social Impact
+* IoT
+* Other
+
+Difficulty:
+
+* Beginner
+* Intermediate
+* Advanced
+
+Status:
+
+* Idea
+* Looking for Team
+* In Development
+* Completed
+
+Add:
+
+**Create Idea**
+
+button.
+
+Validate required fields.
+
+Store the idea in localStorage.
+
+After creation, show a success message and redirect to the idea details page.
+
+---
+
+# 6. EXPLORE IDEAS
+
+Create a page where students can browse all project ideas.
+
+Each idea should appear as a card containing:
+
+* Project title
+* Short description
+* Category
+* Technologies
+* Difficulty
+* Status
+* Creator name
+* Number of interested students
+
+Add:
+
+* Search bar
+* Category filter
+* Difficulty filter
+* Status filter
+
+Allow users to save/unsave ideas.
+
+Add a:
+
+**View Details**
+
+button.
+
+---
+
+# 7. IDEA DETAILS
+
+Create a detailed page for each idea.
+
+Show:
+
+* Title
+* Full description
+* Category
+* Technologies
+* Difficulty
+* Status
+* Creator
+* Team members
+* Required team size
+
+Buttons:
+
+* Save Idea
+* I'm Interested
+* Contact Creator
+
+When "I'm Interested" is clicked:
+
+Add the current user to the interested students list.
+
+Prevent the same user from applying multiple times.
+
+Show a confirmation message.
+
+---
+
+# 8. MY IDEAS
+
+Create a page showing ideas created by the logged-in user.
+
+Each card should have:
+
+* View
+* Edit
+* Delete
+
+Add a confirmation before deleting.
+
+---
+
+# 9. SAVED IDEAS
+
+Create a page showing ideas saved by the logged-in user.
+
+Allow users to remove ideas from saved list.
+
+---
+
+# 10. TEAM / INTERESTED STUDENTS
+
+On the idea details page, show students who clicked:
+
+**I'm Interested**
+
+Display:
+
+* Name
+* Course
+* Year
+* College
+
+Allow the creator to see interested students.
+
+For this first version, do not implement real-time chat.
+
+---
+
+# 11. PROFILE
+
+Create a simple student profile page.
+
+Show:
+
+* Name
+* Email
+* College
+* Course
+* Year
+* Number of ideas created
+* Number of ideas saved
+
+Allow the user to edit their profile information.
+
+---
+
+# 12. NAVIGATION
+
+Create a responsive navigation bar.
+
+When logged in, show:
+
+* Dashboard
+* Explore Ideas
+* Create Idea
+* My Ideas
+* Saved Ideas
+* Profile
+* Logout
+
+When logged out, show:
+
+* Home
+* Explore
+* Login
+* Register
+
+On mobile, use a hamburger menu.
+
+---
+
+# DESIGN
+
+Make the website look modern, professional and different from a generic template.
+
+Use:
+
+* Clean white/light background
+* Deep blue primary color
+* Subtle accent colors
+* Rounded cards
+* Soft shadows
+* Modern typography
+* Good spacing
+* Attractive buttons
+* Hover effects
+* Smooth transitions
+
+Use icons where appropriate.
+
+Create a consistent design throughout the application.
+
+Make it fully responsive for:
+
+* Desktop
+* Tablet
+* Mobile
+
+Do not overcrowd the interface.
+
+---
+
+# SAMPLE DATA
+
+Add a few sample project ideas so the Explore page doesn't look empty on first launch.
+
+Examples:
+
+1. Campus Event Manager
+2. Student Skill Exchange
+3. Smart Study Planner
+4. College Lost & Found
+5. Local Volunteer Platform
+
+Clearly mark these as sample/demo ideas.
+
+Do not present fake achievements or fake users as real people.
+
+---
+
+# DATA STORAGE
+
+Use localStorage for:
+
+* Registered users
+* Current logged-in user
+* Project ideas
+* Saved ideas
+* Interested students
+
+Create reusable helper functions for localStorage operations.
+
+Make sure refreshing the browser does not delete the data.
+
+---
+
+# SECURITY / VALIDATION
+
+This is a student/demo project, so localStorage authentication is acceptable for Version 1.
+
+However, clearly structure the code so a real backend/database can be added later.
+
+Validate:
+
+* Empty fields
+* Invalid email
+* Duplicate registration email
+* Incorrect login
+* Duplicate interest/application
+* Duplicate saved idea
+
+Show friendly error and success messages.
+
+---
+
+# CODE STRUCTURE
+
+Organize the React project cleanly.
+
+Use components such as:
+
+* Navbar
+* Footer
+* IdeaCard
+* SearchBar
+* FilterBar
+* ProtectedRoute
+* Modal
+* LoadingState
+* EmptyState
+
+Create separate pages for the major routes.
+
+Use reusable components instead of putting everything into one file.
+
+---
+
+# IMPORTANT
+
+Do NOT create unnecessary features.
+
+Do NOT add:
+
+* AI chatbot
+* Payment system
+* Real-time messaging
+* Complicated backend
+* Unnecessary animations
+* Unnecessary external APIs
+
+Keep Version 1 focused and fully functional.
+
+The priority is:
+
+**Working functionality > excessive design > unnecessary features.**
+
+---
+
+# FINAL REQUIREMENTS
+
+Before finishing:
+
+1. Make sure the application runs without errors.
+2. Test every route.
+3. Test registration.
+4. Test login/logout.
+5. Test creating an idea.
+6. Test editing and deleting an idea.
+7. Test searching/filtering.
+8. Test saving an idea.
+9. Test "I'm Interested".
+10. Test profile editing.
+11. Test mobile responsiveness.
+12. Fix any console errors.
+
+After building the project, explain:
+
+1. Project folder structure
+2. Important files
+3. How routing works
+4. How localStorage works
+5. How login works
+6. How ideas are created and stored
+7. How I can modify the design
+8. How I can add a real database later
+9. How I can deploy the application
+
+Build the complete working Version 1 now.
